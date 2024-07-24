@@ -1,0 +1,87 @@
+/*Slider Styles*/
+.ant-carousel {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    line-height: inherit;
+    margin-bottom: 0;
+  }
+
+  & .slick-dots {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.ant-carousel-vertical {
+  & .slick-slide {
+    height: 160px;
+  }
+}
+
+.slick-slider {
+  margin-bottom: @gx-card-margin-base;
+
+  @media screen and (max-width: @screen-xs-max) {
+    margin-bottom: @gx-card-margin-base-res;
+  }
+
+  & .slick-prev {
+    left: -10px;
+
+    &:before {
+      color: @black-color;
+    }
+  }
+
+  & .slick-next {
+    right: -10px;
+
+    &:before {
+      color: @black-color;
+    }
+  }
+
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.slick-dots {
+
+  & li button {
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+
+.ant-modal .slides {
+  position: relative;
+
+  & .slick-prev,
+  & .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-top: -10px;
+  }
+
+  & .slick-prev {
+    left: 20px;
+  }
+
+  & .slick-next {
+    right: 20px;
+  }
+}
+
+.ant-modal .slick-slider {
+  margin-bottom: 0;
+}

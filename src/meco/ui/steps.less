@@ -1,0 +1,49 @@
+/*Steps Styles*/
+.ant-steps {
+  &-dot {
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 10px 0;
+
+    & .ant-steps-item {
+      margin-bottom: 10px;
+    }
+
+    & .ant-steps-item-description {
+      @media screen and (max-width: @screen-xs-max) {
+        display: none;
+      }
+    }
+  }
+
+  &-item-finish {
+    .ant-steps-item-icon {
+      border-color: green !important;
+
+      .ant-steps-finish-icon {
+        color: green !important;
+      }
+    }
+  }
+
+  //&-process {
+  //  .ant-steps-item-icon {
+  //    border-color: yellow !important;
+  //    background-color: yellow !important;
+  //
+  //    .ant-steps-icon {
+  //      color: yellow !important;
+  //    }
+  //  }
+  //}
+
+  &-item-wait {
+    .ant-steps-item-icon {
+      border-color: orange !important;
+
+      .ant-steps-icon {
+        color: orange !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+/*Button Styles*/
+.ant-btn {
+  line-height: @btn-height-base - 2px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 40px;
+  padding-left: 40px;
+  min-width: 144px;
+
+  &-primary {
+    color: .primary-inside-color()[@color] !important;
+  }
+
+  &-text {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    min-width: 0 !important;
+  }
+
+  &-link {
+    min-width: 0 !important;
+    background: transparent !important;
+    color: @primary-color !important;
+    border: none !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  &-default {
+    font-weight: 500;
+    border-width: 3px;
+    color: @primary-color !important;
+    border-color: @primary-color !important;
+    background-color: transparent !important;
+
+    &:hover {
+      background-color: fade(@primary-color, 20%) !important;
+    }
+  }
+
+  &-group-sm {
+    & .ant-btn {
+      line-height: @btn-height-sm;
+    }
+  }
+
+  &-group-lg {
+    & .ant-btn {
+      line-height: @btn-height-lg;
+    }
+  }
+
+  &-sm {
+    line-height: 16px;
+    padding: 0 !important;
+
+    .ant-btn-group > & {
+      line-height: @btn-height-sm;
+    }
+
+    &.ant-btn-icon-only {
+      line-height: 1;
+    }
+  }
+
+  &-lg {
+    line-height: @btn-height-lg;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 52px;
+
+    .ant-btn-group > & {
+      line-height: @btn-height-lg;
+    }
+
+    &.ant-btn-icon-only {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 52px;
+      min-width: 52px;
+    }
+  }
+
+  &-group-lg > .ant-btn,
+  &-group-lg > span > .ant-btn {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin-right: 10px;
+    }
+
+    .ant-btn-group &,
+    .ant-transfer-operation & {
+      margin-right: 0;
+    }
+
+  }
+
+  .ant-input-group-addon & {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    margin-bottom: 10px;
+  }
+
+
+  .ant-input-search & {
+    margin-bottom: 0;
+  }
+
+
+  .ant-modal-footer &,
+  .ant-modal-confirm-btns & {
+    margin-bottom: 0;
+  }
+
+
+  .ant-btn-group & {
+    .boxed-layout & {
+      padding: 0 @padding-md - 4px;
+    }
+
+    @media (max-width: (@screen-xl-min + 166px)) {
+      padding: 0 @padding-md - 4px;
+    }
+  }
+
+}
+
+.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    border-color: @primary-color !important;
+    color: @primary-color !important;
+
+    &:hover,
+    &:focus {
+      background-color: @primary-color !important;
+      border-color: @primary-color !important;
+      color: @white-color !important;
+    }
+  }
+}
+
+.ant-btn-group {
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.ant-radio-group {
+  & .ant-radio-button-wrapper {
+    margin-bottom: 6px;
+  }
+}
+
+button {
+  outline: none;
+}
+
+.ant-confirm .ant-confirm-btns button + button {
+  margin-bottom: 8px;
+}
+
+.ant-modal.ant-confirm .ant-confirm-btns button + button,
+.ant-modal.ant-confirm .ant-btn {
+  margin-bottom: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: @btn-font-weight;
+  color: @btn-default-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: @border-style-base @border-width-base @btn-default-border;
+  padding: @btn-padding-base;
+  height: @btn-height-base;
+  font-size: @font-size-base;
+  line-height: @btn-height-base - 2px;
+  .border-radius(@border-radius-sm);
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin-right: 10px;
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    margin-bottom: 10px;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 0.65;
+  }
+
+  &:not([disabled]):not(.disabled) {
+    cursor: pointer;
+  }
+
+}
+
+.ant-btn-icon-only.suffix-button {
+  min-width: 10px;
+  height: 41.5px;
+  border-width: 2px;
+}

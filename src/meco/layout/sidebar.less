@@ -1,0 +1,52 @@
+/* Sidebar Style */
+.ant-layout-sider {
+  background-color: @nav-bar-bg;
+  color: @nav-bar-text-color;
+  flex: 0 0 auto !important;
+  max-width: none !important;
+  min-width: 10px !important;
+  width: @sidebar-width !important;
+  overflow: hidden;
+
+  .sider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ant-btn {
+      font-size: 28px;
+      width: 40px;
+      padding: 0;
+      min-width: 0;
+      height: fit-content;
+    }
+  }
+
+  .ant-menu-item, .ant-menu-item-icon {
+    font-size: 20px !important;
+  }
+
+  .ant-menu-item {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+
+    &:last-of-type {
+      margin-top: 50px !important;
+    }
+  }
+
+  @media screen and (max-width: (@screen-xl-min + 166px)) {
+    width: (@sidebar-width + 20) !important;
+  }
+
+  &-collapsed {
+    width: @sidebar-mini-drawer-width !important;
+
+  }
+
+  @media screen and (max-width: @screen-md-max) {
+    width: 0 !important;
+    min-width: 0 !important;
+  }
+}
+

@@ -1,0 +1,267 @@
+@import "./ant-dark";
+
+//global style variables
+@dark-theme-primary-color: #0B0E1E;
+@dark-theme-secondary-color: @white-color;
+@dark-theme-text-color: #6E7080;
+@dark-theme-heading-color: lighten(@dark-theme-text-color, 5%);
+@dark-theme-sidebar-dark-bg: @dark-theme-component-background;
+@dark-theme-component-background: #1D212E;
+@dark-theme-sidebar-dark-text-color: #a1a1a1;
+@dark-theme-sidebar-dark-bg-darken: lighten(@dark-theme-sidebar-dark-bg, 6%);
+@dark-theme-sidebar-dark-hover-color: @dark-theme-component-background;
+@dark-theme-border-color: #495762;
+@dark-theme-input-border-color: fade(@white-color, 30%);
+@dark-theme-sidebar-color: #00AE9D;
+@dark-theme-message-background: fade(@dark-theme-extra-color, 60%);
+@dark-theme-extra-color: #939393;
+@dark-theme-drawer-color: #2E2F3F;
+/*Base Styles*/
+body.dark-theme {
+  color: @dark-theme-text-color;
+  background-color: @dark-theme-primary-color;
+
+  &.framed-layout,
+  &.boxed-layout {
+    background-color: darken(@dark-theme-primary-color, 10%);
+  }
+
+  & h1, & h2, & h3, & h4, & h5, & h6,
+  & .h1, & .h2, & .h3, & .h4, & .h5, & .h6 {
+    color: @dark-theme-heading-color;
+  }
+
+  footer {
+    background-color: fade(@dark-theme-component-background, 30%) !important;
+
+    .ant-typography {
+      color: @dark-theme-text-color;
+    }
+  }
+
+  & .ais {
+    &-Breadcrumb,
+    &-ClearRefinements,
+    &-CurrentRefinements,
+    &-GeoSearch,
+    &-HierarchicalMenu,
+    &-Hits,
+    &-Results,
+    &-HitsPerPage,
+    &-ResultsPerPage,
+    &-InfiniteHits,
+    &-InfiniteResults,
+    &-Menu,
+    &-MenuSelect,
+    &-NumericMenu,
+    &-NumericSelector,
+    &-Pagination,
+    &-Panel,
+    &-PoweredBy,
+    &-RangeInput,
+    &-RangeSlider,
+    &-RatingMenu,
+    &-RefinementList,
+    &-RefinementList-count,
+    &-SearchBox,
+    &-SortBy,
+    &-Stats,
+    &-ToggleRefinement,
+    &-RatingMenu-count {
+      color: @dark-theme-text-color;
+    }
+
+    &-SearchBox-input,
+    &-RangeInput-input,
+    &-MenuSelect-select,
+    &-NumericSelector-select,
+    &-HitsPerPage-select,
+    &-ResultsPerPage-select,
+    &-SortBy-select {
+      color: @dark-theme-primary-color;
+    }
+
+    &-RangeInput-submit,
+    &-ClearRefinements-button,
+    &-CurrentRefinements-reset,
+    &-GeoSearch-redo,
+    &-GeoSearch-reset,
+    &-HierarchicalMenu-showMore,
+    &-InfiniteHits-loadMore,
+    &-InfiniteResults-loadMore,
+    &-Menu-showMore,
+    &-RefinementList-showMore {
+      background-color: @dark-theme-text-color;
+      color: @dark-theme-primary-color;
+
+      &:focus,
+      &:hover {
+        background-color: @dark-theme-text-color;
+        color: @dark-theme-primary-color;
+      }
+    }
+
+    &-Breadcrumb-link,
+    &-HierarchicalMenu-link,
+    &-Menu-link,
+    &-Pagination-link,
+    &-RatingMenu-link {
+      color: @dark-theme-text-color;
+
+      &:focus,
+      &:hover {
+        color: @dark-theme-text-color;
+        background-color: @dark-theme-primary-color;
+      }
+    }
+
+    &-Pagination-item--selected-Pagination-link {
+      background-color: @primary-color;
+      border-color: @dark-theme-border-color;
+    }
+
+  }
+
+  li.ant-time-picker-panel-select-option-selected {
+    background: lighten(@dark-theme-component-background, 8%);
+  }
+
+
+  .loadbar {
+    .ant-progress-inner {
+      background-color: @dark-theme-primary-color;
+    }
+  }
+
+  .graph-container {
+    background-color: @dark-theme-component-background;
+
+    .graph {
+      .extra-buttons {
+        .ant-btn {
+          background-color: fade(@dark-theme-text-color, 30%) !important;
+
+          &-primary {
+            background-color: fade(@primary-button-color, 50%) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .plot-filter {
+
+    span {
+      b {
+        color: @white-color;
+      }
+    }
+  }
+
+  & .rdw-editor-wrapper {
+    color: darken(@dark-theme-text-color, 60%);
+    background-color: @component-background;
+
+    & + textarea {
+      color: darken(@dark-theme-text-color, 60%);
+    }
+  }
+
+  & .sweet-alert {
+    color: darken(@dark-theme-text-color, 60%);
+
+    & h1, & h2, & h3, & h4, & h5, & h6, & .h1, & .h2, & .h3, & .h4, & .h5, & .h6 {
+      color: darken(@dark-theme-text-color, 60%);
+    }
+  }
+
+  & .rbc {
+    &-event {
+      background-color: lighten(@dark-theme-component-background, 20%);
+    }
+
+    &-event.rbc-selected {
+      background-color: darken(@dark-theme-component-background, 10%);
+    }
+
+    &-slot-selection {
+      background-color: lighten(@dark-theme-component-background, 10%);
+    }
+
+    &-toolbar button {
+      color: @dark-theme-text-color;
+      border-color: @dark-theme-text-color;
+    }
+
+    &-toolbar button:active,
+    &-toolbar button.rbc-active,
+    &-toolbar button:active:hover,
+    &-toolbar button.rbc-active:hover,
+    &-toolbar button:active:focus,
+    &-toolbar button.rbc-active:focus,
+    &-toolbar button:focus,
+    &-toolbar button:hover {
+      color: @dark-theme-primary-color;
+      background-color: @dark-theme-text-color;
+      border-color: @dark-theme-text-color;
+    }
+
+    &-month-view,
+    &-time-view,
+    &-today {
+      background: @dark-theme-component-background;
+    }
+
+    &-off-range-bg {
+      background: lighten(@dark-theme-component-background, 10%);
+    }
+  }
+
+  & .steps-content {
+    border-color: @dark-theme-border-color;
+    background-color: lighten(@dark-theme-component-background, 5%);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: @dark-theme-text-color !important;
+  }
+
+  & .btn {
+    color: @btn-default-color;
+    border-color: @btn-default-border;
+  }
+
+  & .plotly {
+    .svg-container {
+      .main-svg:first-of-type {
+        background: #1d212e !important;
+
+        .bglayer {
+          rect.bg {
+            fill: #1d212e !important;
+          }
+        }
+      }
+
+      .infolayer {
+        .legend {
+          rect.bg {
+            fill: #1d212e !important;
+          }
+        }
+      }
+    }
+  }
+
+  & .control-modes {
+    background: #1d212e !important;
+  }
+
+  & .anticon-calendar {
+    color: white;
+  }
+}

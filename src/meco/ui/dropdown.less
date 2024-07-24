@@ -1,0 +1,29 @@
+.ant-dropdown {
+  &-menu {
+    &-item {
+      padding: 0 12px;
+
+      a:hover {
+        .ant-btn-text {
+          color: @primary-color !important;
+        }
+      }
+
+      .ant-btn-text {
+        //color: white !important;
+        &:hover {
+          color: @primary-color !important;
+        }
+      }
+    }
+
+    .ant-popover-buttons {
+      display: flex;
+      justify-content: space-around;
+
+      .ant-btn {
+        margin: 0;
+      }
+    }
+  }
+}

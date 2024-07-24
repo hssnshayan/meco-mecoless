@@ -1,0 +1,33 @@
+/* Ant Layout Style */
+.ant-layout {
+  position: relative;
+  background: none;
+  min-height: 100%;
+
+
+  &.ant-layout-has-sider > .ant-layout {
+    position: relative;
+    background: @body-background;
+  }
+
+  .framed-layout &,
+  .boxed-layout & {
+    background: @body-background;
+  }
+
+  .framed-layout &,
+  .boxed-layout & {
+    background: @body-background;
+  }
+
+
+  &.ant-layout-has-sider > .ant-layout,
+  &.ant-layout-has-sider > .ant-layout-content {
+
+    .full-scroll & {
+      overflow-x: inherit;
+    }
+  }
+}
+
+

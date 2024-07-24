@@ -1,0 +1,31 @@
+.ant-switch {
+  height: 28px;
+  background: #696969;
+  color: @white-color;
+
+  &-handle {
+    top: 5px;
+    left: 4px;
+  }
+
+  &-checked {
+    background-color: @primary-button-color;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .ant-switch-inner {
+      color: .primary-inside-color()[@color] !important;
+
+    }
+
+    .ant-switch-handle {
+      left: calc(100% - 18px - 4px) !important;
+
+      &:before {
+        background-color: .primary-inside-color()[@color] !important;
+      }
+    }
+  }
+}

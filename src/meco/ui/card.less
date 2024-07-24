@@ -1,0 +1,108 @@
+/*Card Styles*/
+.ant-card {
+  margin-bottom: @gx-card-margin-base;
+
+  &-head {
+    background: none;
+    border: none !important;
+
+    &-title {
+      text-align: center;
+      font-weight: @font-weight-normal;
+    }
+
+  }
+
+
+  &-grid {
+    text-align: center;
+    width: 25%;
+
+    @media screen and (max-width: @screen-sm-max) {
+      width: 33.33%;
+    }
+
+    @media screen and (max-width: @screen-xs-max ) {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    margin-bottom: @gx-card-margin-base-res;
+  }
+
+  &-body {
+    font-size: 40px !important;
+    font-weight: 700;
+    text-align: center;
+
+    & .ant-card-head {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  &-type-inner {
+    & .ant-card-head {
+      padding-left: @gx-card-padding-base !important;
+      padding-right: @gx-card-padding-base !important;
+    }
+  }
+}
+
+.ant-card-wider-padding .ant-card-body {
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ant-divider-horizontal {
+  &.ant-divider-with-text,
+  &.ant-divider-with-text-left,
+  &.ant-divider-with-text-right {
+    font-size: @font-size-base;
+  }
+}
+
+.info-card {
+  color: white !important;
+
+  h3 {
+    color: white !important;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .ant-card-body {
+    padding: 18px !important;
+
+    .ant-row {
+      & .ant-col:last-of-type {
+        padding-left: 20px;
+      }
+
+      & .ant-col:first-of-type {
+        display: flex;
+        align-items: center;
+      }
+
+      .anticon {
+        font-size: 26px;
+        background-color: red !important;
+        padding: 5px;
+        border-radius: 50%;
+      }
+
+      h4 {
+        color: white !important;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      h6 {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}

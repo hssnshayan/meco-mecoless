@@ -1,0 +1,10 @@
+{
+  "name": "meco-less",
+  "version": "1.0.7",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "antd": "^4.24.7"
+  }
+}

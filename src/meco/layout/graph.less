@@ -1,0 +1,145 @@
+.graph-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 8px;
+  min-height: 720px;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  .data-table {
+    padding: 48px 80px;
+  }
+
+  .ant-row {
+    .ant-btn {
+      margin: 10px;
+    }
+  }
+
+  .plot-filter {
+    padding-top: 8px;
+    padding-left: 20px;
+
+    span {
+      b {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .ant-segmented {
+      &-sm {
+        .ant-segmented-item-label {
+          min-height: 32px;
+          min-width: 90px !important;
+        }
+      }
+    }
+  }
+
+  .graph {
+    width: 100%;
+    position: relative;
+
+    .extra-buttons {
+      padding: 0 0 10px 0;
+
+      .plot-controls {
+        padding-left: 20px;
+
+        .ant-btn {
+          border: none;
+          background-color: #353947 !important;
+          color: @dark-theme-text-color;
+
+          &-sm {
+            min-width: 120px !important;
+            height: 40px;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+
+          &-primary {
+            background-color: fade(@primary-button-color, 50%) !important;
+            color: .primary-inside-color()[@color] !important;
+          }
+        }
+      }
+    }
+
+    .js-plotly-plot {
+      &.fuel-type-container {
+        .svg-container {
+          min-height: 100px !important;
+        }
+      }
+
+      .svg-container {
+        min-height: 700px !important;
+
+        .shapes-layer {
+          opacity: 0.5;
+        }
+
+        .hoverlayer {
+          rect.bg {
+            fill-opacity: 1 !important;
+          }
+        }
+      }
+    }
+
+    .f-plot {
+      .svg-container {
+        min-height: 130px !important;
+      }
+    }
+  }
+
+  .graph-sider {
+    width: 0;
+    background-color: @dark-theme-component-background;
+    padding: 20px;
+  }
+
+  .graph-placeholder {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sticky-legend {
+  position: sticky;
+  bottom: 0;
+}
+
+.control-modes {
+  background: #f5f5f5;
+
+  & .ant-col:first-child {
+    padding-left: 20px;
+    color: #939393;
+  }
+
+  &-legends {
+    .ant-col {
+      //padding: 0 16px;
+
+      span {
+        padding: 0 2px;
+      }
+    }
+  }
+
+  .ant-typography {
+    color: #939393;
+  }
+}
+

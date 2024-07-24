@@ -1,0 +1,90 @@
+/*Input Styles*/
+.ant-input-search {
+  margin-bottom: 16px;
+
+  & > .ant-input-suffix > .ant-input-search-button {
+    margin-right: 0;
+  }
+}
+
+.ant-input-group {
+
+  & > [class*="col-"] {
+    padding-left: 0;
+    float: left !important;
+  }
+}
+
+.ant-transfer-list {
+  margin-bottom: 10px;
+}
+
+.ant-input-number {
+  margin-right: 10px;
+
+  .ant-input-number-handler-wrap {
+    background: transparent !important;
+    opacity: 1 !important;
+
+    .ant-input-number-handler {
+      border: none !important;
+    }
+  }
+}
+
+.ant-checkbox-inner {
+  border-radius: 3px !important;
+}
+
+.ant-transfer-list {
+  width: 150px;
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+  }
+}
+
+
+.ant-mention-wrapper {
+  border: @border-style-base @border-width-base @border-color;
+  padding: 8.6px 11px;
+  .border-radius(@border-radius-base);
+}
+
+.ant-input-group-addon, .ant-input-number-group-addon {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.ant-input-group > .ant-input:first-child, .ant-input-group-addon:first-child {
+  border-right: 0 !important;
+}
+
+.ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+  background-color: transparent !important;
+}
+
+@media screen and (max-width: (@screen-xs-max - 100px)) {
+  .ant-input-group.ant-input-group-compact {
+    & > * {
+      .border-radius(4px) !important;
+      width: 100% !important;
+      border-right-width: 1px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    // reset border for Select, DatePicker, AutoComplete, Cascader, Mention, TimePicker
+    & > .@{ant-prefix}-select > .@{ant-prefix}-select-selection,
+    & > .@{ant-prefix}-calendar-picker .@{ant-prefix}-input,
+    & > .@{ant-prefix}-select-auto-complete .@{ant-prefix}-input,
+    & > .@{ant-prefix}-cascader-picker .@{ant-prefix}-input,
+    & > .@{ant-prefix}-mention-wrapper .@{ant-prefix}-mention-editor,
+    & > .@{ant-prefix}-time-picker .@{ant-prefix}-time-picker-input {
+      border-radius: 4px;
+      border-right-width: 1px;
+    }
+  }
+}

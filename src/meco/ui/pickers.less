@@ -1,0 +1,48 @@
+/*Pickers Styles*/
+.photoshop-picker,
+.swatches-picker,
+.alpha-picker,
+.hue-picker {
+  width: 100% !important;
+}
+
+
+.ant-calendar-footer .ant-calendar-ok-btn {
+  margin-bottom: 0;
+}
+
+.ant-picker-range-separator {
+  svg {
+    color: white;
+  }
+}
+
+.ant-picker-cell {
+  color: @grey-7 !important;
+
+  &-in-view {
+    color: black !important;
+  }
+
+  &-selected,
+  &-range-start,
+  &-range-start-single,
+  &-range-end,
+  &-range-end-single {
+    .ant-picker-cell-inner {
+      background-color: @primary-color !important;
+    }
+  }
+
+  &-range-hover-end,
+  &-range-hover-start {
+    &:before {
+
+      content: none !important;
+    }
+
+    .ant-picker-cell-inner:after {
+      content: none !important;
+    }
+  }
+}

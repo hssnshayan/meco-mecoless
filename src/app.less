@@ -1,0 +1,130 @@
+@import "meco/meco.less";
+
+@error-color: #C3102D;
+.primary-inside-color() {
+  @color: if((hsvvalue(@primary-color)>69), black, white);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate20 {
+  0% {
+    transform: rotate(10deg);
+  }
+  12% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  37% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  62% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  87% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+body {
+  background-color: #e6e6e6;
+
+
+  .float-icon {
+    background-color: @dark-theme-component-background;
+    border: 3px solid @dark-theme-component-background;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    right: -3px;
+    bottom: 250px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 44px;
+
+    &:hover {
+      border-color: @primary-color;
+    }
+
+    .ant-btn {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+
+      span:not(svg) {
+        display: none;
+      }
+
+      &:active,
+      &:focus {
+        background-color: transparent !important;
+        border-color: transparent !important;
+      }
+
+      &:hover {
+        color: @primary-color;
+
+        svg {
+          animation: none;
+        }
+      }
+
+      svg {
+        font-size: 24px;
+        animation: rotate20 1s ease-in-out infinite;
+      }
+    }
+
+    &-2 {
+      bottom: 200px;
+    }
+
+    &-3 {
+      bottom: 150px;
+    }
+
+    &-4 {
+      bottom: 100px;
+    }
+
+    &-hoverable {
+      &:hover {
+        width: 100px;
+        border-color: @primary-color;
+
+        .ant-btn {
+          svg {
+            animation: rotate 0.5s linear;
+          }
+
+          span:not(svg) {
+            display: flex;
+            font-size: 16px;
+            padding-left: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .app-container {
+    padding: 40px 70px;
+  }
+
+
+}
